@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer utilities{
+
+    /* responsive */
+
+    .MqSmall{
+        font-size: min(max(0rem, 3vw),1.25rem);
+    }
+    .MqMedium{
+        font-size: 1rem;
+    }
+    .MqLarge{
+        font-size: min(max(0.9rem, 1vw),1.2rem);
+    }
+    .MqXLarge{
+        font-size: min(max(1rem, 1vw),1.2rem);
+    }
+    
+
+    .mainController{
+        @apply MqSmall xsm:MqMedium lg:MqLarge xl:MqXLarge;
+    }
+
+
+    /* end resp */
+
+    
+   
+    /* basics */
+    img,
+    svg{
+        @apply w-full h-full;
+    }
+    
+    
+    /* end basics */
+
+
+    /* menu */
+
+    .showMenu{
+        @apply w-[13em];
+    }
+
+    .showMenu .menuArrow{
+        @apply rotate-180;
+    }
+
+    .activeMenu{
+        @apply scale-100;
+    }
+
+    .menuDot{
+        @apply relative transition-colors;
+    }
+    
+    .menuDot::before {
+        @apply transition-[width] duration-500 ease-[cubic-bezier(.23,1.36,.13,1.13)] absolute w-[0.5em] aspect-square content-[''] border-[0.1em] rounded-full border-[#b1b1b1] left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 ;
+    }
+
+    .activeMenuSelection::before{
+        @apply w-1em border-[#3f3f3f];
+    }
+
+    .activeMenuSelection{
+        @apply bg-[#3f3f3f];
+    }
+
+    /* end menu */
+}
