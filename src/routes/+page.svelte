@@ -42,7 +42,7 @@ xl:text-[1.15em]">
 
 
     <div style="clip-path: inset(80% 40% 20% 40%);" class=" heroSectionBg overflow-hidden opacity-[50%] absolute left-0 top-0 w-full h-full">
-        <img class="w-full h-full object-cover" src="/images/home/background.jpg" alt="">
+        <img class="w-full h-full object-cover" src="/images/home/background.webp" alt="">
     </div>
 
     <div class="w-[90%] left-1/2 -translate-x-1/2 absolute bottom-[12em] text-white
