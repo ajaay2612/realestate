@@ -41,7 +41,7 @@ xl:text-[1.15em]">
 
 
 
-    <div style="clip-path: inset(80% 40% 20% 40%);" class=" heroSectionBg overflow-hidden opacity-[50%] absolute left-0 top-0 w-full h-full">
+    <div style="clip-path: inset(80% 40% 20% 40%);" class=" heroSectionBg overflow-hidden opacity-[70%] absolute left-0 top-0 w-full h-full">
         <img class="w-full h-full object-cover" src="/images/home/background.webp" alt="">
     </div>
 
