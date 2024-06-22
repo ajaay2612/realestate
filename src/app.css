@@ -6,6 +6,30 @@
 
 
 
+
+/* lenis */
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+
+
 @layer utilities{
 
     /* responsive */
@@ -89,7 +113,23 @@
     .ourStory{
         @apply translate-y-[50%] opacity-0
     }
-    .imageBlock{
+    /* .imageBlock{
         @apply translate-y-[20%] opacity-0
+    } */
+
+    .imageBlockMain img{
+        clip-path: (0% 0% 100% 0%);
+        @apply opacity-0 ;
+    }
+
+    .imageBlockMain{
+        @apply origin-top overflow-hidden;
+    }
+
+    .ourStory .outerCont{
+        @apply overflow-hidden
+    }
+    .ourStory .innerCont{
+        @apply inline-block 
     }
 }
