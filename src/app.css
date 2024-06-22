@@ -74,4 +74,22 @@
     }
 
     /* end menu */
+
+
+
+    /* section margin */
+
+    .sectionMarginContainer{
+        @apply w-[90%] mx-auto max-w-[1280px]
+    }
+
+
+    /* about aimation */
+
+    .ourStory{
+        @apply translate-y-[50%] opacity-0
+    }
+    .imageBlock{
+        @apply translate-y-[20%] opacity-0
+    }
 }

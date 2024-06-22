@@ -11,7 +11,7 @@
 
 <!-- mobile -->
 
-<div class="md:hidden">
+<div class=" md:hidden ">
     {#if showMenu}
         <div  in:slide={{duration:500,delay:100, easing: expoOut}} out:slide={{duration:500}} class="z-[100] shadow-md  left-1/2 -translate-x-1/2 bottom-6hem fixed font-roboto text-[1.5em] bg-white rounded-[1.5em] w-[13em] p-0hem py-[0.9em]">
             {#each $tabs.all as tab, i}
@@ -24,7 +24,7 @@
     {/if}
     
     
-    <button class:showMenu={showMenu} on:click={()=>showMenu = !showMenu}  class="z-[100] shadow-md transition-[width] ease-[cubic-bezier(.03,1.49,.5,1)] duration-700 flex justify-between items-center  left-1/2 -translate-x-1/2 bottom-2em fixed font-roboto text-[1.5em] bg-white rounded-full  w-[9em] p-0hem" type="button" >
+    <button class:showMenu={showMenu} on:click={()=>showMenu = !showMenu}  class="menuAnim z-[100] shadow-md transition-[width] ease-[cubic-bezier(.03,1.49,.5,1)] duration-700 flex justify-between items-center  left-1/2 -translate-x-1/2 bottom-2em fixed font-roboto text-[1.5em] bg-white rounded-full  w-[9em] p-0hem" type="button" >
         <div class="menuArrow transition-[transform] duration-500 w-2hem rounded-full bg-[black] aspect-square p-[0.9em]">
             <svg viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 12L11 2.5L20.5 12" stroke="#fff" stroke-width="3"/>
