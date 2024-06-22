@@ -1,8 +1,8 @@
 //+++++++++++++++++++++++++++++++++++ vercel
-// import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-vercel';
 
 //+++++++++++++++++++++++++++++++++++ spa
-import adapter from '@sveltejs/adapter-static';
+// import adapter from '@sveltejs/adapter-static';
 
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -14,25 +14,25 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		
 		//+++++++++++++++++++++++++++++++++++ vercel
-		// adapter: adapter({
-		// 	images: {
-		// 		sizes: [640, 828, 1200, 1920, 3840],
-		// 		formats: ['image/avif', 'image/webp'],
-		// 		minimumCacheTTL: 300,
-		// 		domains: ['example-app.vercel.app'],
-		// 	}
-		// })
+		adapter: adapter({
+			images: {
+				sizes: [640, 828, 1200, 1920, 3840],
+				formats: ['image/avif', 'image/webp'],
+				minimumCacheTTL: 300,
+				domains: ['example-app.vercel.app'],
+			}
+		})
 
 		//+++++++++++++++++++++++++++++++++++ spa
-		adapter: adapter({
-			// default options are shown. On some platforms
-			// these options are set automatically — see below
-			pages: 'build',
-			assets: 'build',
-			fallback: undefined,
-			precompress: false,
-			strict: true
-		})
+		// adapter: adapter({
+		// 	// default options are shown. On some platforms
+		// 	// these options are set automatically — see below
+		// 	pages: 'build',
+		// 	assets: 'build',
+		// 	fallback: undefined,
+		// 	precompress: false,
+		// 	strict: true
+		// })
 	},
 	preprocess: vitePreprocess()
 
