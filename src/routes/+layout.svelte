@@ -9,14 +9,15 @@
 
     onMount(() => {
         // lenis
-        $lenisStore = new Lenis()
+        $lenisStore.store = new Lenis()
 
-        $lenisStore.on('scroll', (e) => {
-            // console.log(e)
+        $lenisStore.store.on('scroll', (e) => {
+            $lenisStore.onScroll = e
+    
         })
 
         function raf(time) {
-            $lenisStore.raf(time)
+            $lenisStore.store.raf(time)
             requestAnimationFrame(raf)
         }
 
@@ -24,19 +25,19 @@
         requestAnimationFrame(raf)
 
         if ($page.url.hash) {
-            $lenisStore.scrollTo($page.url.hash)
+            $lenisStore.store.scrollTo($page.url.hash)
             // console.log("hashed")        
         }
 
     })
 
     beforeNavigate(() => {
-        $lenisStore.stop()
+        $lenisStore.store.stop()
         // console.log("stopped")
     })
 
     afterNavigate(() => {
-        $lenisStore.start()
+        $lenisStore.store.start()
         // console.log("started")
     })
 </script>

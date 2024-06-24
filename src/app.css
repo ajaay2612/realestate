@@ -117,7 +117,7 @@ html.lenis, html.lenis body {
         @apply translate-y-[20%] opacity-0
     } */
 
-    .imageBlockMain img{
+    .imageBlockMain .animatedImages{
         clip-path: (0% 0% 100% 0%);
         @apply opacity-0 ;
     }
@@ -132,4 +132,52 @@ html.lenis, html.lenis body {
     .ourStory .innerCont{
         @apply inline-block 
     }
+
+    .aboutHoverImage{
+        @apply -translate-x-full;
+    }
+
+
+    /* work section*/
+
+
+    .workSectionTab{
+        height: min(max(0.9rem,150vw),90rem)
+    }
+    .workSectionPc{
+        height: min(max(0.9rem,135vw),122rem)
+    }
+
+    .workSection{
+        @apply md:workSectionTab lg:workSectionPc;
+    }
+
+    .workOneTab{
+        @apply absolute left-0 top-0 w-[48%];
+    }
+
+    .workOne{
+        @apply md:workOneTab;
+    }
+
+    .workTwoTab{
+        @apply absolute right-0 top-0 translate-y-[18%] w-[37%];
+    }
+
+    .workTwo{
+        @apply md:workTwoTab;
+    }
+
+    .workThreeTab{
+        transform: translateY(min(max(0.9rem, 70vw),62rem));
+        @apply absolute right-[15%] top-0 w-[37%] pb-4em;
+    }
+
+    .workThree{
+        @apply md:workThreeTab;
+    }
+
+    
+ 
+
 }
