@@ -33,7 +33,7 @@
 
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<section class="w-full py-4em servicesSection relative overflow-hidden">
+<section class="w-full py-4em faqSection relative overflow-hidden">
 
     <div class="sectionMarginContainer ">
 
@@ -58,8 +58,8 @@
 </section>
 
 
-
+<!-- 
 <section class="h-screen bg-red-200 w-full">
 
-</section>
+</section> -->
 

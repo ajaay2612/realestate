@@ -13,11 +13,11 @@
 
 
 
-<!-- <Landing/> -->
-<!-- <About/> -->
-<!-- <Work/> -->
-<!-- <Services/> -->
-<!-- <Faq/> -->
+<Landing/>
+<About/>
+<Work/>
+<Services/>
+<Faq/>
 <Blog/>
 
 
