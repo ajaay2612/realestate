@@ -178,6 +178,14 @@ html.lenis, html.lenis body {
     }
 
     
+    /* services section */
+
+    .accordionItem:last-child {
+        border-bottom: 1px solid #E7E7E7;
+    }
+    .accordionItemFaq:last-child {
+        border-bottom: 0px;
+    }
  
 
 }
