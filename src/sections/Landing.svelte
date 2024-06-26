@@ -44,7 +44,7 @@ xl:text-[1.15em]">
     <div class="w-[90%] left-1/2 -translate-x-1/2 absolute bottom-[12em] text-white
     md:bottom-[20%]">
         <div class="homeContent">
-            <h2 class="mainSubline text-[1.8em] mb-0hem
+            <h2 class="mainSubline opacity-0 text-[1.8em] mb-0hem
             lg:text-[1em]">
                 Explore a Wide Range <br class="lg:hidden"> of Properties
             </h2>

@@ -24,7 +24,7 @@
     {/if}
     
     
-    <button class:showMenu={showMenu} on:click={()=>showMenu = !showMenu}  class="menuAnim z-[100] shadow-md transition-[width] ease-[cubic-bezier(.03,1.49,.5,1)] duration-700 flex justify-between items-center  left-1/2 -translate-x-1/2 bottom-2em fixed font-roboto text-[1.5em] bg-white rounded-full  w-[9em] p-0hem" type="button" >
+    <button class:showMenu={showMenu} on:click={()=>showMenu = !showMenu}  class="menuAnim opacity-0 z-[100] shadow-md transition-[width] ease-[cubic-bezier(.03,1.49,.5,1)] duration-700 flex justify-between items-center  left-1/2 -translate-x-1/2 bottom-2em fixed font-roboto text-[1.5em] bg-white rounded-full  w-[9em] p-0hem" type="button" >
         <div class="menuArrow transition-[transform] duration-500 w-2hem rounded-full bg-[black] aspect-square p-[0.9em]">
             <svg viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 12L11 2.5L20.5 12" stroke="#fff" stroke-width="3"/>
@@ -41,7 +41,7 @@
 
 <!-- pc -->
 
-<div class="menuAnim hidden md:flex z-[100] shadow-md group w-[12em] hover:w-[38em] overflow-hidden text-[1em]  gap-1em transition-[width] ease-[cubic-bezier(0, 1.02, 0.3, 0.98)] duration-700 justify-start items-center  left-1/2 -translate-x-1/2 bottom-2em fixed font-roboto  bg-white rounded-full p-0hem pr-2em" >
+<div class="menuAnim opacity-0 hidden md:flex z-[100] shadow-md group w-[12em] hover:w-[38em] overflow-hidden text-[1em]  gap-1em transition-[width] ease-[cubic-bezier(0, 1.02, 0.3, 0.98)] duration-700 justify-start items-center  left-1/2 -translate-x-1/2 bottom-2em fixed font-roboto  bg-white rounded-full p-0hem pr-2em" >
     <div class="flex-shrink-0 rotate-90 w-2hem rounded-full bg-[black] aspect-square p-[0.9em]">
         <svg viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.5 12L11 2.5L20.5 12" stroke="#fff" stroke-width="3"/>

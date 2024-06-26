@@ -14,11 +14,11 @@
 
 
 <Landing/>
-<About/>
+<!-- <About/>
 <Work/>
 <Services/>
 <Faq/>
-<Blog/>
+<Blog/> -->
 
 
 <!-- <style lang="postcss">
