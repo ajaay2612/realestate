@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import { inView , animate, stagger ,timeline} from "motion"
     import { register } from 'swiper/element/bundle';
     register();
         
@@ -25,7 +26,23 @@
             label: 'How to Choose the Right Real Estate Agent',
         },
 	];
-	
+    let customInOut = [1,0,.18,.99]
+    let customInOutFast = [.79,-0.01,.34,1]
+    let customOut = [.2,.88,.56,1]
+    let customFastOut = [.21,.53,.34,1]
+
+    onMount(()=>{
+        inView(".blogSection", (info) => {
+
+
+            const sequence = [
+                [".blogHeadLine", { y:['20%','0'], opacity: [0,1] }, { duration: 1, easing:customOut , delay: stagger(0.15)}],  
+                ["swiper-container", { x:['2em','0'], opacity: [0,1],  }, {at:'-0.6', duration: 1, easing:customOut , delay: stagger(0.15)}],  
+            ]
+            timeline(sequence,{ delay: 0 })
+
+        },{amount:0.2})
+    })
 
     onMount(() => {
         const swiperEl = document.querySelector('swiper-container');
@@ -67,17 +84,17 @@
 
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<section class="w-full py-4em blogSection relative overflow-hidden">
+<section class="w-full py-4em blogSection relative overflow-hidden min-h-[60vh] md:min-h-[95vh]">
 
     <div class="sectionMarginContainer ">
 
-        <h2 class="blogHeadLine relative text-[2.5em] w-fit pb-1hem capitalize
+        <h2 class="blogHeadLine translate-y-[20%] opacity-0 relative text-[2.5em] w-fit pb-1hem capitalize
             md:text-[1.9em] ">
             Blogs
             <div class="w-[1.5em] h-[3px] bg-[#C2C2C2]"></div>
         </h2>
 
-        <swiper-container init="false" loop="true">
+        <swiper-container init="false" loop="true" class="cursor-pointer">
             {#each blogs as blog}
                 <swiper-slide>
                     <div class="blog" style='background-color:{blog.color};'>

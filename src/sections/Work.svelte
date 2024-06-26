@@ -55,6 +55,9 @@
     onMount(()=>{
 
         inView(".workSection", (info) => {
+            if($lenisStore.onScroll){
+                offsetX = $lenisStore.onScroll.animatedScroll
+            }
 
             animate(".workHeadLine", {transform:'translateY(0)', opacity:1 }, {duration: 1.2, easing:customOut , delay:0.2})
 
@@ -77,11 +80,12 @@
     })
 
 
+    let offsetX = 0
 
     let isScrolling = false
     let scrollDistance = 0
 
-    $: if(isScrolling){ scrollDistance = $lenisStore.onScroll ?  $lenisStore.onScroll.animatedScroll < 0 ? 0 : $lenisStore.onScroll.animatedScroll || null : null}
+    $: if(isScrolling){ scrollDistance = $lenisStore.onScroll ?  $lenisStore.onScroll.animatedScroll - offsetX < 0 ? 0 : $lenisStore.onScroll.animatedScroll -offsetX || 0 : 0}
 
     // follow cusrsor 
     let mouseX
@@ -116,7 +120,8 @@
     let ShowCursor = false
     let ShowView = false
 
-    const handleMouseEnter = (customClass) => {
+    const handleMouseEnter = (e,customClass) => {
+        pointers =  [e.clientX, e.clientY]
         ShowView = false
         ShowCursor = true
         setTimeout(() => {
@@ -130,7 +135,8 @@
 
     }
 
-    const handleMouseLeave = (customClass) => {
+    const handleMouseLeave = (e,customClass) => {
+        pointers =  [e.clientX, e.clientY]
         ShowCursor = false
         ShowView = false
         // console.log(ShowCursor)
@@ -180,7 +186,7 @@ on:mousemove={(e) => pointers =  [e.clientX, e.clientY ]}>
         <div class="relative flex flex-col gap-4em">
 
             {#each workText as work}
-                <div on:mouseenter={()=> handleMouseEnter(work.class)} on:mouseleave={()=> handleMouseLeave(work.class)} class=" {work.class} ">
+                <div on:mouseenter={(e)=> handleMouseEnter(e,work.class)} on:mouseleave={(e)=> handleMouseLeave(e,work.class)} class=" {work.class} ">
                     <div class="imageBlockMain imageBlockMain-work w-full">
                         <img class="animatedImages"  style="scale:{scrollDistance * 0.00015 + 1}" src="{work.image}" alt="">
                     </div>

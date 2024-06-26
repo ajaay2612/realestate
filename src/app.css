@@ -134,7 +134,7 @@ html.lenis, html.lenis body {
     }
 
     .aboutHoverImage{
-        @apply -translate-x-full;
+        @apply -translate-x-[101%];
     }
 
 

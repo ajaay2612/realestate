@@ -43,11 +43,9 @@
     ]
 
 
-    let anotherOpen = false
 
 
     const handleMouseEnter = (i) => {
-        anotherOpen = true
         animate(`.aboutHoverImageMain`, { transform:'translateX(0%)' }, { duration: 0, easing:customInOutFast})
 
         animate(`.aboutHoverImageMain`, { transform:'translateX(5%)' }, { duration: 0.5, easing:customInOutFast})
@@ -57,14 +55,12 @@
     }
     
     const handleMouseLeave = (i) => {
-        anotherOpen = false
         animate(`.aboutHoverImageMain`, { transform:'translateX(0%)' }, { duration: 0.5, easing:customInOutFast})
-        animate(`.aboutHoverImage${i}`, { transform:'translateX(-100%)' }, { duration: 0.5, easing:customInOutFast})
+        animate(`.aboutHoverImage${i}`, { transform:'translateX(-101%)' }, { duration: 0.5, easing:customInOutFast})
         animate(`.animatedImages${i}`, { scale:1 }, { duration: 0.4, easing:customInOutFast})
         console.log("mouse leave")
     }
 
-    $: console.log(anotherOpen)
 
 </script>
 

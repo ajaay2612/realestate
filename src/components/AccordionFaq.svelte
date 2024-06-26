@@ -42,7 +42,7 @@
     const handleMouseLeave = (e,i) => {
         let closeButtonFaq = e.target.querySelector('.closeButtonFaq svg')
         const sequence = [
-            [".accordionFaqAnimateBlack"+i, {  transform:'translateY(-100%)' }, {duration: 0.5, easing:customInOut}],  
+            [".accordionFaqAnimateBlack"+i, {  transform:'translateY(-101%)' }, {duration: 0.5, easing:customInOut}],  
             [".accordionFaqAnimateBlack"+i, {  borderRadius:'100%' }, {at:'-0.5',duration: 0.5, easing:customInOut}],  
             [e.target, {  color:'black'  }, {at:0, duration: 0.5, easing:customInOut}],  
             // [".accordionContent"+i, {  scaleX:1 }, {at:0, duration: 0.5, easing:customInOut}],  
@@ -63,9 +63,9 @@ multiple value="$0">
 
     {#each items as item, i}
         <Accordion.Item value="${i}"  
-        class="px-1hem accordionItemFaq relative overflow-hidden border-b-[1px] border-[#6E6E6E]"
+        class="px-1hem accordionItemFaq translate-y-[20%] opacity-0 relative overflow-hidden border-b-[1px] border-[#6E6E6E]"
         >
-        <div class="accordionFaqAnimateBlack{i} rounded-[100%] bg-black absolute w-full h-full left-0 top-0 -translate-y-full"></div>
+        <div class="accordionFaqAnimateBlack{i} rounded-[100%] bg-black absolute w-full h-full left-0 top-0 -translate-y-[101%]"></div>
 
             <Accordion.Header>
                 <Accordion.Trigger class="font-light w-full text-[1.2em] transition-all 

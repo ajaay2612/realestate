@@ -1,6 +1,7 @@
 <script>
     import "../app.css";
     import Header from "../components/Header.svelte";
+    import Footer from "../components/Footer.svelte";
     import lenisStore from '../stores/lenisStore.js';
     import { afterNavigate,beforeNavigate } from '$app/navigation';
     import { onMount } from 'svelte';
@@ -47,4 +48,5 @@
 <div class="mainController font-roboto" >
     <Header/>
     <slot />
+    <Footer/>
 </div>

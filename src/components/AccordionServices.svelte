@@ -48,7 +48,7 @@
         let blackBox = e.target.querySelector('.accordionAnimateBlack')
         let closeButton = e.target.querySelector('.closeButton svg')
         const sequence = [
-            [".accordionAnimateBlack"+i, {  transform:'translateY(-100%)' }, {duration: 0.5, easing:customInOut}],  
+            [".accordionAnimateBlack"+i, {  transform:'translateY(-101%)' }, {duration: 0.5, easing:customInOut}],  
             [".accordionAnimateBlack"+i, {  borderRadius:'100%' }, {at:'-0.5',duration: 0.5, easing:customInOut}],  
             [e.target, {  color:'black', scaleX:1  }, {at:0, duration: 0.5, easing:customInOut}],  
             // [".accordionContent"+i, {  scaleX:1 }, {at:0, duration: 0.5, easing:customInOut}],  
@@ -69,9 +69,9 @@ multiple>
 
     {#each items as item, i}
         <Accordion.Item value="${i}"  
-        class=" accordionItem relative overflow-hidden border-[1px] border-b-0 border-[#E7E7E7]"
+        class=" accordionItem translate-y-[20%] opacity-0 relative overflow-hidden border-[1px] border-b-0 border-[#E7E7E7]"
         >
-        <div class="accordionAnimateBlack{i} rounded-[100%] bg-black absolute w-full h-full left-0 top-0 -translate-y-full"></div>
+        <div class="accordionAnimateBlack{i} rounded-[100%] bg-black absolute w-full h-full left-0 top-0 -translate-y-[101%]"></div>
 
             <Accordion.Header>
                 <Accordion.Trigger class="font-light w-full text-[1.2em] transition-all 
