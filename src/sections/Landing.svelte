@@ -15,17 +15,17 @@
             [".heroSectionBg img", { scale:[0.8,1] }, {duration: 1, easing:customInOut }],
             [".heroSectionBg", { clipPath: "inset(0% 0% 0% 0%)" }, {at: "-0.9",  duration: 1, easing:customInOut }],
             [".mainLogoParts", { y: [10, 0] , opacity: [0, 100]}, {at: "-0.1", duration: 1 }],
-            [".menuAnim", {  bottom: ["1.5em", '2em'] ,  opacity: [0, 100] }, {at: "-0.7", duration: 1 , easing:customOut  }],
+            [".menuAnim", {  opacity: [0, 100] }, {at: "-0.7", duration: 1 , easing:customOut  }],
             [".spinPopAnimation", { y:["100%","0%"] }, {at: "-0.7", delay: stagger(0.007), duration: 1.2, easing:customInOut }],
             [".spinPopAnimation", {  rotate:["5deg","0deg"]}, { at:"-0.9", delay: stagger(0.005), duration: 1, easing:"ease" }],
             [".mainSubline", { y: [5, 0] , opacity: [0, 100]}, {at: "-0.2", duration: 0.7 , easing:customOut }],
-            [".homeContent", {  y:["70%","0%"] }, {at: "-0.55", duration: 1 , easing:customInOut  }],
+            // [".homeContent", {  y:["70%","0%"] }, {at: "-0.55", duration: 1 , easing:customInOut  }],
             [".mainFilterContainer", { clipPath: "inset(0% 0% 0% 0%)"}, {at: "-0.8", duration: 0.8 , easing:customInOut  }],
             
         ]
 
 
-        let animation = timeline(sequence,{autoplay :false})
+        let animation = timeline(sequence,{autoplay :false,duration:0})
         animation.play()
     })
 
@@ -42,20 +42,20 @@ xl:text-[1.15em]">
     </div>
 
     <div class="w-[90%] left-1/2 -translate-x-1/2 absolute bottom-[12em] text-white
-    md:bottom-[20%]">
+    md:bottom-[10%]">
         <div class="homeContent">
             <h2 class="mainSubline opacity-0 text-[1.8em] mb-0hem
             lg:text-[1em]">
                 Explore a Wide Range <br class="lg:hidden"> of Properties
             </h2>
             <h1 class="overflow-hidden text-[3.8em] leading-[1em] font-medium
-            md:text-[4em]">
+            md:text-[5em]">
                 {#each 'Elevate Your'.split('') as letter,i}
                     <span class="spinPopAnimation inline-block translate-y-full rotate-45 origin-bottom-right">{letter}</span>
                 {/each}
             </h1>
-            <h1 class="overflow-hidden relative text-[3.8em] leading-[1em] mb-[0.7em] font-medium
-            md:text-[4em]">
+            <h1 class="overflow-hidden relative text-[3.8em] leading-[1em] mb-[0.5em] font-medium
+            md:text-[5em]">
                 {#each ' Living Experience'.split('') as letter,i}
                     <span class="spinPopAnimation inline-block translate-y-full rotate-45 origin-bottom-right">{letter}</span>
                 {/each}
@@ -68,7 +68,7 @@ xl:text-[1.15em]">
             <div class="flex flex-wrap gap-0hem">
 
                 {#each $filter as f,i}
-                    <div class="mainFilterChild w-[calc(50%-0.25em)] text-[1.1em]
+                    <div class="text-black mainFilterChild w-[calc(50%-0.25em)] text-[1.1em]
                     md:w-[19%] md:flex-grow md:text-[1.1em]
                     lg:pb-[0.8em]">
                         <DropDown {i} dropDowns={f.options} title={f.title}/>

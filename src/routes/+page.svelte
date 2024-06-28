@@ -1,6 +1,10 @@
 <script>
-    import About from '../sections/About.svelte'
     import Landing from '../sections/Landing.svelte'
+    import LandingV2 from '../sectionsV2/LandingV2.svelte'
+
+    import About from '../sections/About.svelte'
+    import AboutV2 from '../sections/AboutV2.svelte'
+
     import Work from '../sections/Work.svelte'
     import Services from '../sections/Services.svelte'
     import Faq from '../sections/Faq.svelte'
@@ -13,12 +17,14 @@
 
 
 
-<Landing/>
-<!-- <About/>
+<!-- <Landing/> -->
+<LandingV2/>
+<About/>
+<AboutV2/>
 <Work/>
 <Services/>
 <Faq/>
-<Blog/> -->
+<Blog/>
 
 
 <!-- <style lang="postcss">

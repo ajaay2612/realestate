@@ -15,11 +15,11 @@
 }/>
 
 
-<div class="impDiv{i} relative text-[black] mt-[0.4em] text-[1.4em] md:text-[1em]">
+<div class="impDiv{i} relative  mt-[0.4em] text-[1.4em] md:text-[1em]">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div class="px-[1em]">
-        <h2 class="text-[#6E6E6E] capitalize text-[0.7em]">{title}</h2>
+        <h2 class=" capitalize text-[0.7em]">{title}</h2>
     </div>
     <div on:click={()=>show = !show} class="cursor-pointer flex justify-between items-center w-full py-[0.6em] px-[1em] border-none rounded-[0.8em] ">
         <div class=" font-medium capitalize flex gap-0hem justify-center items-center">

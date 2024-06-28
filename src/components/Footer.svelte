@@ -65,10 +65,10 @@
             // animate(".ourStory .innerCont", { y:['100%','0%'] }, {delay: stagger(0.1), duration: 0.58, easing:customFastOut })  
 
             const sequence = [
-                [".footerMain", { y:['20%','0'], opacity: [0,1] }, { duration: 1, easing:customInOut , delay: stagger(0.1)}],  
-                [".footerLinks", { y:['20%','0'], opacity: [0,1] }, {at:'-0.8',  duration: 1, easing:customInOut , delay: stagger(0.05)}],  
-                [".footerSocials", { y:['20%','0'], opacity: [0,1] }, {at:'-1', duration: 1, easing:customInOut , delay: stagger(0.05, {from:'last'})}],  
-                [".footerBranding", {transform: 'rotateX(0)', opacity: 1, backgroundSize:'120%'}, {at:'+0.1',  duration: 1.5, easing:customOut}],  
+                [".footerMain", { y:['20%','0'], opacity: [0,1] }, { duration: 1, easing:customOut , delay: stagger(0.1)}],  
+                [".footerLinks", { y:['20%','0'], opacity: [0,1] }, {at:'-0.8',  duration: 1, easing:customOut , delay: stagger(0.05)}],  
+                [".footerSocials", { y:['20%','0'], opacity: [0,1] }, {at:'-1', duration: 1, easing:customOut , delay: stagger(0.05, {from:'last'})}],  
+                [".footerBranding", {transform: 'rotateX(0)', opacity: 1, backgroundSize:'120%'}, {at:'-0.7',  duration: 1.5, easing:customOut}],  
                 // [".imageBlockMain-about .animatedImages", { clipPath: ["inset(0% 0% 100% 0%)","inset(0% 0% 0% 0%)"]  }, { duration: 1.5, easing:customInOut , delay: stagger(0.1)}],  
                 // [".imageBlockMain-about .animatedImages", { opacity:[0,1] }, {at:"-1.5", duration: 1.5, easing:customInOut , delay: stagger(0.1)}],  
                 // [".imageBlockMain-about", { scale:[0.8,1] }, { at:"-1.7" ,duration: 1.5, easing:customInOut , delay: stagger(0.1)}],  
@@ -105,7 +105,7 @@
     </button>
 
 
-    <div class="w-[90%] mx-auto flex justify-between items-end mt-[18em] 
+    <div class="w-[90%] mx-auto flex justify-between items-end mt-[30vh] 
     lg:mt-[7em] lg:items-center">
 
         <nav class=" [&>li]:list-none flex flex-col gap-[0.2em] text-[1.7em]

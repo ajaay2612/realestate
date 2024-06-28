@@ -46,6 +46,11 @@ html.lenis, html.lenis body {
     .MqXLarge{
         font-size: min(max(1rem, 1vw),1.2rem);
     }
+
+
+    .blackBGMain{
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0.20%, #000000d4 55%);
+    }
     
 
     .mainController{
@@ -187,5 +192,15 @@ html.lenis, html.lenis body {
         border-bottom: 0px;
     }
  
+
+    /* aboutv2 */
+
+    .spinPopAnimationAboutV2{
+        @apply rotate-[20deg] translate-y-[110%];
+    }
+
+    .aboutV2Image img{
+        @apply translate-y-[120%];
+    }
 
 }
