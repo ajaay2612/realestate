@@ -157,6 +157,8 @@ html.lenis, html.lenis body {
         @apply md:workSectionTab lg:workSectionPc;
     }
 
+
+
     .workOneTab{
         @apply absolute left-0 top-0 w-[48%];
     }
@@ -203,4 +205,11 @@ html.lenis, html.lenis body {
         @apply translate-y-[120%];
     }
 
+    /* work v3 */
+    .work3gradient {
+        background: linear-gradient(180.12deg, rgba(0, 0, 0, 0) 13.76%, #000000 99.89%);
+    }
+    .work3gradientPc {
+        background: linear-gradient(-125deg, rgba(0, 0, 0, 0) 13.76%, #00000086 90.89%);
+    }
 }

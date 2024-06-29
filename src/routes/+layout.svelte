@@ -2,6 +2,7 @@
     import "../app.css";
     import Header from "../components/Header.svelte";
     import Footer from "../components/Footer.svelte";
+    import FooterV2 from "../components/FooterV2.svelte";
     import lenisStore from '../stores/lenisStore.js';
     import { afterNavigate,beforeNavigate } from '$app/navigation';
     import { onMount } from 'svelte';
@@ -49,4 +50,5 @@
     <Header/>
     <slot />
     <Footer/>
+    <FooterV2/>
 </div>
